@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/source.js"></script>
+</head>
+<body ng-app="myModule" ng-controller="myContrl">
+	{{ emp.name }} {{ emp.age }} {{ emp.phone }}
+
+	<!-- 
+	<table>
+		<thead style="background-color: red">
+			<tr>
+				<td>First Name</td>
+				<td>Last Name</td>
+				<td>Age</td>
+			</tr>		
+		</thead>
+		<tbody>
+			<tr ng-repeat="person in employees">
+				<td> {{ person.firstname }}</td>
+				<td> {{ person.lastname }}</td>
+				<td> {{ person.age }}</td>
+			</tr>
+		</tbody>
+	
+	</table>
+ -->
+
+	<ul ng-repeat="country in countries">
+		<li >{{ country.name }}
+			<ul>
+				<li ng-repeat="city in country.cities"> {{ city.name }}</li>
+			</ul>
+		</li>
+	</ul>
+
+</body>
+</html>
