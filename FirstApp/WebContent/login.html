@@ -3,22 +3,23 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
 
-	<form action="http://localhost:8080/FirstApp/WebContent/login.html" method="post"> 
+	<form name="loginForm" method="post" >
 		<table>
-			<tr>
+			<tr> 
 				<td>Enter User Name: </td>
-				<td><input type="text" name="username"></td>
+				<td><input type="text" name="username" required="required"></td>
 			</tr>
 			<tr>
 				<td>Enter Password</td>
-				<td> <input type="password" name="password">  </td>
+				<td> <input type="password" name="password" required="required">  </td>
 			</tr>
 
 			<tr>
-				<td><button type="submit" name="Login">Log In</button></td>
+				<td><button type="submit" name="Login" onclick="check(this.form)" >Log In</button></td>
 				<td><button type="reset" name="Reset">Reset</button></td>
 			</tr>
 
