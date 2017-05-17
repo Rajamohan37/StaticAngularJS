@@ -10,11 +10,17 @@ function validateLogin() {
 
 }
 
-function check(form) {
+function login(form){
+	
 	if (form.username.value == "raju" && form.password.value == "raju") {
-		window.location.href = 'http://localhost:8080/FirstApp/success.html';
-		return false;
+		_redirect();
 	} else {
 		alert("Error Password or Username");
 	}
+	
+}
+
+function _redirect() {
+	window.location.assign("http://localhost:8080/FirstApp/success.html");
+	return false;
 }
